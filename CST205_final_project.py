@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import QRect
 from PyQt5.QtGui import QPixmap
 import random
-#import pygame
+import pygame
 import sys
 class GUISetup(QMainWindow):
     def __init__(self):
@@ -12,7 +12,7 @@ class GUISetup(QMainWindow):
         self.setGeometry(0,0,650,650)
     def initUI(self):
         self.resize(600,500)
-        self.setWindowTitle('The Yawgh')
+        self.setWindowTitle('the Yawhg')
         self.label = QLabel(self)
         height_of_label = 500
         self.label.resize(self.width(), height_of_label)
@@ -27,13 +27,13 @@ if __name__ == '__main__':
     ex.initUI()
 #----- Audio Setup -----------------------
 #Need pygame to run aduio, (pip install pygame)
-#    pygame.init()
-#    pygame.mixer.music.load("testsound.mp3")
-#    pygame.mixer.music.play()
+    pygame.init()
+    pygame.mixer.music.load("Misc/bgsound.mp3")
+    pygame.mixer.music.play()
 #-----------------------------------------
 
 ex.setImage("Misc/title.jpg")
-input("Hit enter")
+input("Hit enter.")
 
 ex.setImage("Portraits/blueportrait.jpg")
 p1 = input("Who is a antisocial huntress who goes bear trapping? ")
@@ -102,25 +102,31 @@ for move in range(1,25):
     week += 1
     
     if week == 1:
+      Continue = input("\n... (Enter to Continue on all text)")
       ex.setImage("Week/1.jpg")  
 
     if week == 2:
+      Continue = input("\n... (Enter to Continue on all text)")
       ex.setImage("Week/2.jpg")
       input("They say the last time it came, the YAWHG devoured houses whole. Stole lives. Tore families (and family members) apart. But that was so very long ago...\n")
 
     if week == 3:
+      Continue = input("\n... (Enter to Continue on all text)")
       ex.setImage("Week/3.jpg")
       input("It was on us in a heartbeat -or so the stories go. The earth shook... the air went... still...\n")
 
     if week == 4:
+      Continue = input("\n... (Enter to Continue on all text)")
       ex.setImage("Week/4.jpg")
       input("...and then the world was a howling fury. Chaos. Screaming. The sound of all we knew being pulled in half...\n") 
 
     if week == 5:
+      Continue = input("\n... (Enter to Continue on all text)")
       ex.setImage("Week/5.jpg")
       input("When it arrives this time... how will we fare? Will we once more rebuild, move on, be strong... or have we forgotten?\n") 
 
     if week == 6:
+      Continue = input("\n... (Enter to Continue on all text)")
       ex.setImage("Week/6.jpg")
       input("The YAWHG. It's almost here. Almost, almost.\n") 
 
@@ -446,14 +452,17 @@ for move in range(1,25):
         p1Physique = p1Physique+1
         
       if turn in p2turns:
+        ex.setImage("InsetPanels/6/22.jpg")
         p2Charm = p2Charm+2
         p2Physique = p2Physique+1
 
       if turn in p3turns:
+        ex.setImage("InsetPanels/6/23.jpg")
         p3Charm = p3Charm+2
         p3Physique = p3Physique+1
 
       if turn in p4turns:
+        ex.setImage("InsetPanels/6/24.jpg")
         p4Charm = p4Charm+2
         p4Physique = p4Physique+1
 
@@ -465,21 +474,25 @@ for move in range(1,25):
       Continue = input("\nYou spend the week steeling your mind against the horrors of the hospital, making sure it is as clean as can be. You gain 1 Mind, 1 Physique and earn 1 Wealth!\n")
       
       if turn in p1turns:
+        ex.setImage("InsetPanels/7/11.jpg")
         p1Mind = p1Mind+1
         p1Physique = p1Physique+1
         p1Wealth = p1Wealth+1
         
       if turn in p2turns:
+        ex.setImage("InsetPanels/7/12.jpg")
         p2Mind = p2Mind+1
         p2Physique = p2Physique+1
         p2Wealth = p2Wealth+11
 
       if turn in p3turns:
+        ex.setImage("InsetPanels/7/13.jpg")
         p3Mind = p3Mind+1
         p3Physique = p3Physique+1
         p3Wealth = p3Wealth+1
       
       if turn in p4turns:
+        ex.setImage("InsetPanels/7/14.jpg")
         p4Mind = p4Mind+1
         p4Physique = p4Physique+1
         p4Wealth = p4Wealth+1
@@ -489,18 +502,22 @@ for move in range(1,25):
       Continue = input("\nYou spend the week diagnosing and tending to the sick. You gain 2 Mind and 1 Wealth!\n")
 
       if turn in p1turns:
+        ex.setImage("InsetPanels/7/21.jpg")
         p1Mind = p1Mind+2
         p1Wealth = p1Wealth+1
         
       if turn in p2turns:
+        ex.setImage("InsetPanels/7/22.jpg")
         p2Mind = p2Mind+2
         p2Wealth = p2Wealth+1
 
       if turn in p3turns:
+        ex.setImage("InsetPanels/7/23.jpg")
         p3Mind = p3Mind+2
         p3Wealth = p3Wealth+1
 
       if turn in p4turns:
+        ex.setImage("InsetPanels/7/24.jpg")
         p4Mind = p4Mind+2
         p4Wealth = p4Wealth+1
 
@@ -512,18 +529,22 @@ for move in range(1,25):
       Continue = input("\nYou spend the week performing petty theft. You earn 1 Wealth and 2 Finesse!\n")
       
       if turn in p1turns:
+        ex.setImage("InsetPanels/8/11.jpg")
         p1Wealth = p1Wealth+1
         p1Finesse = p1Finesse+2
         
       if turn in p2turns:
+        ex.setImage("InsetPanels/8/12.jpg")
         p2Wealth = p2Wealth+1
         p2Finesse = p2Finesse+2
 
       if turn in p3turns:
+        ex.setImage("InsetPanels/8/13.jpg")
         p3Wealth = p3Wealth+1
         p3Finesse = p3Finesse+2
       
       if turn in p4turns:
+        ex.setImage("InsetPanels/8/14.jpg")
         p4Wealth = p4Wealth+1
         p4Finesse = p4Finesse+2
 
@@ -532,24 +553,30 @@ for move in range(1,25):
       Continue = input("\nYou spend the week outsmarting and beating up criminals. You gain 1 Mind, 1 Physique and 1 Finesse!\n")
 
       if turn in p1turns:
+        ex.setImage("InsetPanels/8/21.jpg")
         p1Mind = p1Mind+1
         p1Physique = p1Physique+1
         p1Finesse = p1Finesse+1
         
       if turn in p2turns:
+        ex.setImage("InsetPanels/8/22.jpg")
         p2Mind = p2Mind+1
         p2Physique = p2Physique+1
         p2Finesse = p2Finesse+1
 
       if turn in p3turns:
+        ex.setImage("InsetPanels/8/23.jpg")
         p3Mind = p3Mind+1
         p3Physique = p3Physique+1
         p3Finesse = p3Finesse+1
 
       if turn in p4turns:
+        ex.setImage("InsetPanels/8/24.jpg")
         p4Mind = p4Mind+1
         p4Physique = p4Physique+1
         p4Finesse = p4Finesse+1
+
+ex.setImage("Misc/title.jpg")
 
 Ending = input("The storm arrives in the night. By the morning it still rages. For 3 full days the tempest puts us through a grinder -drowns us, crushes us ruins us...\n")
 
@@ -557,9 +584,12 @@ Ending = input("...but then it ends. We see the graveyard our home has become.\n
 
 Ending = input("Our home.\n")
 
+ex.setImage("Week/7.jpg")
+
 Ending = input("Does anything yet live?\n")
 
 Ending = input("Is it, are we, past saving?\n")
+
 
 for move in range(25,29):
   turn += 1
@@ -587,7 +617,8 @@ for move in range(25,29):
 
   Role = input("Choose your role (1-8) ")
 
-  if Role == "1":
+  if Role == "1" and turn in p1turns:
+    ex.setImage("InsetPanels/Ending/good1.jpg")
     Leader = input("\nYou take it upon yourself to be the leader of the survivors.")
 
     Leader = input("\nYou expertly delegate and prioritize tasks.")
@@ -596,14 +627,71 @@ for move in range(25,29):
 
     Leader = input("\nThis helps the rebuilding effort significantly!")
 
-  if Role == "2":
+
+  if Role == "1" and turn in p2turns:
+    ex.setImage("InsetPanels/Ending/good2.jpg")
+    Leader = input("\nYou take it upon yourself to be the leader of the survivors.")
+
+    Leader = input("\nYou expertly delegate and prioritize tasks.")
+
+    Leader = input("\nYou give motivational speeches and act as an effective mediator in disputes.")
+
+    Leader = input("\nThis helps the rebuilding effort significantly!")
+
+  if Role == "1" and turn in p3turns:
+    ex.setImage("InsetPanels/Ending/good3.jpg")
+    Leader = input("\nYou take it upon yourself to be the leader of the survivors.")
+
+    Leader = input("\nYou expertly delegate and prioritize tasks.")
+
+    Leader = input("\nYou give motivational speeches and act as an effective mediator in disputes.")
+
+    Leader = input("\nThis helps the rebuilding effort significantly!")
+
+  if Role == "1" and turn in p4turns:
+    ex.setImage("InsetPanels/Ending/good4.jpg")
+    Leader = input("\nYou take it upon yourself to be the leader of the survivors.")
+
+    Leader = input("\nYou expertly delegate and prioritize tasks.")
+
+    Leader = input("\nYou give motivational speeches and act as an effective mediator in disputes.")
+
+    Leader = input("\nThis helps the rebuilding effort significantly!")
+
+  if Role == "2" and turn in p1turns:
+    ex.setImage("InsetPanels/Ending/okay1.jpg")
     Builder = input("\nYou take it upon yourself to help rebuild the town by hand!")
 
     Builder = input("\nYou rebuild homes at breakneck speed, impressing the rest of the survivors.")
 
-    Builder = input("\nThis helps the rebuilding effort significantly")
+    Builder = input("\nThis helps the rebuilding effort significantly.")
 
-  if Role == "3":
+  if Role == "2" and turn in p2turns:
+    ex.setImage("InsetPanels/Ending/okay2.jpg")
+    Builder = input("\nYou take it upon yourself to help rebuild the town by hand!")
+
+    Builder = input("\nYou rebuild homes at breakneck speed, impressing the rest of the survivors.")
+
+    Builder = input("\nThis helps the rebuilding effort significantly.")
+
+  if Role == "2" and turn in p3turns:
+    ex.setImage("InsetPanels/Ending/okay3.jpg")
+    Builder = input("\nYou take it upon yourself to help rebuild the town by hand!")
+
+    Builder = input("\nYou rebuild homes at breakneck speed, impressing the rest of the survivors.")
+
+    Builder = input("\nThis helps the rebuilding effort significantly.")
+
+  if Role == "2" and turn in p4turns:
+    ex.setImage("InsetPanels/Ending/okay4.jpg")
+    Builder = input("\nYou take it upon yourself to help rebuild the town by hand!")
+
+    Builder = input("\nYou rebuild homes at breakneck speed, impressing the rest of the survivors.")
+
+    Builder = input("\nThis helps the rebuilding effort significantly.")
+
+  if Role == "3" and turn in p1turns:
+    ex.setImage("InsetPanels/Ending/okay1.jpg")
     Conjurer = input("\nYou take it upon yourself to help conjure up supplies for the town!")
 
     Conjurer = input("\nWith your magic, you summon a small amount of supplies!")
@@ -612,7 +700,38 @@ for move in range(25,29):
 
     Conjurer = input("\nThis helps a little in the rebuilding effort.")
 
-  if Role == "4":
+  if Role == "3" and turn in p2turns:
+    ex.setImage("InsetPanels/Ending/okay2.jpg")
+    Conjurer = input("\nYou take it upon yourself to help conjure up supplies for the town!")
+
+    Conjurer = input("\nWith your magic, you summon a small amount of supplies!")
+
+    Conjurer = input("\nYou struggle a lot to keep up with demand, but can barely summon the amount of lumber and food required.")
+
+    Conjurer = input("\nThis helps a little in the rebuilding effort.")
+
+  if Role == "3" and turn in p3turns:
+    ex.setImage("InsetPanels/Ending/okay3.jpg")
+    Conjurer = input("\nYou take it upon yourself to help conjure up supplies for the town!")
+
+    Conjurer = input("\nWith your magic, you summon a small amount of supplies!")
+
+    Conjurer = input("\nYou struggle a lot to keep up with demand, but can barely summon the amount of lumber and food required.")
+
+    Conjurer = input("\nThis helps a little in the rebuilding effort.")
+
+  if Role == "3" and turn in p4turns:
+    ex.setImage("InsetPanels/Ending/okay4.jpg")
+    Conjurer = input("\nYou take it upon yourself to help conjure up supplies for the town!")
+
+    Conjurer = input("\nWith your magic, you summon a small amount of supplies!")
+
+    Conjurer = input("\nYou struggle a lot to keep up with demand, but can barely summon the amount of lumber and food required.")
+
+    Conjurer = input("\nThis helps a little in the rebuilding effort.")
+
+  if Role == "4" and turn in p1turns:
+    ex.setImage("InsetPanels/Ending/good1.jpg")
     Doctor = input("\nYou take it upon yourself to help the sick and injured from the YAWHG.")
 
     Doctor = input("\nYou're able to fix up most of your patients in no time at all.")
@@ -621,7 +740,74 @@ for move in range(25,29):
 
     Doctor = input("\nThis helps the survival effort considerably!")
 
-  if Role == "5":
+  if Role == "4" and turn in p2turns:
+    ex.setImage("InsetPanels/Ending/good2.jpg")
+    Doctor = input("\nYou take it upon yourself to help the sick and injured from the YAWHG.")
+
+    Doctor = input("\nYou're able to fix up most of your patients in no time at all.")
+
+    Doctor = input("\nThis means there are more people to help with rebuilding the town.")
+
+    Doctor = input("\nThis helps the survival effort considerably!")
+
+  if Role == "4" and turn in p3turns:
+    ex.setImage("InsetPanels/Ending/good3.jpg")
+    Doctor = input("\nYou take it upon yourself to help the sick and injured from the YAWHG.")
+
+    Doctor = input("\nYou're able to fix up most of your patients in no time at all.")
+
+    Doctor = input("\nThis means there are more people to help with rebuilding the town.")
+
+    Doctor = input("\nThis helps the survival effort considerably!")
+
+  if Role == "4" and turn in p4turns:
+    ex.setImage("InsetPanels/Ending/good4.jpg")
+    Doctor = input("\nYou take it upon yourself to help the sick and injured from the YAWHG.")
+
+    Doctor = input("\nYou're able to fix up most of your patients in no time at all.")
+
+    Doctor = input("\nThis means there are more people to help with rebuilding the town.")
+
+    Doctor = input("\nThis helps the survival effort considerably!")
+
+  if Role == "5" and turn in p1turns:
+    ex.setImage("InsetPanels/Ending/good1.jpg")
+    Smelter = input("\nYou volunteer to smelt your, now-useless coins, into building materials!")
+
+    Smelter = input("\nWith the modest amount of riches you have you manage to provide a significant amount of metal.")
+
+    Smelter = input("\nYou melt it all down and the smiths take it and work it into various tools and building materials.")
+
+    Smelter = input("\nThis helps the survival effort a lot!")
+
+    Smelter = input("\nYou lose 3 Wealth.")
+
+  if Role == "5" and turn in p2turns:
+    ex.setImage("InsetPanels/Ending/good2.jpg")
+    Smelter = input("\nYou volunteer to smelt your, now-useless coins, into building materials!")
+
+    Smelter = input("\nWith the modest amount of riches you have you manage to provide a significant amount of metal.")
+
+    Smelter = input("\nYou melt it all down and the smiths take it and work it into various tools and building materials.")
+
+    Smelter = input("\nThis helps the survival effort a lot!")
+
+    Smelter = input("\nYou lose 3 Wealth.")
+
+  if Role == "5" and turn in p3turns:
+    ex.setImage("InsetPanels/Ending/good3.jpg")
+    Smelter = input("\nYou volunteer to smelt your, now-useless coins, into building materials!")
+
+    Smelter = input("\nWith the modest amount of riches you have you manage to provide a significant amount of metal.")
+
+    Smelter = input("\nYou melt it all down and the smiths take it and work it into various tools and building materials.")
+
+    Smelter = input("\nThis helps the survival effort a lot!")
+
+    Smelter = input("\nYou lose 3 Wealth.")
+
+  if Role == "5" and turn in p4turns:
+    ex.setImage("InsetPanels/Ending/good4.jpg")
     Smelter = input("\nYou volunteer to smelt your, now-useless coins, into building materials!")
 
     Smelter = input("\nWith the modest amount of riches you have you manage to provide a significant amount of metal.")
@@ -703,5 +889,6 @@ if newEnd == 3:
 #Need PyGt5 to run
 #-----------------------------------------
 sys.exit(app.exec_())
+
 
 

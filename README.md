@@ -1,0 +1,3 @@
+the Yawhg
+
+For this project, we elected to re-create a lesser known indie game called the Yawhg from scratch using python 3. The Yawhg is a one to four player choose-your-own-adventure game that randomizes the story every time it is played. Players must decide how they will spend their time over the course of six weeks leading up to a supernatural storm. Their actions will decide the fate of the post-storm community 
