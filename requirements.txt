@@ -1,0 +1,4 @@
+To be able to run this application you need to install:
+- PyQT5
+- Pygame
+- Python3.7
