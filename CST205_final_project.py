@@ -1,4 +1,4 @@
-# SET IMAGE SYNTAX: ex.setImage("map.png")
+#                Will Carrara || Tommy Trans || 12/17/18 || CST 205 
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import QRect
@@ -6,6 +6,10 @@ from PyQt5.QtGui import QPixmap
 import random
 import pygame
 import sys
+
+
+#   ___________________________ the Yawhg __________________________________
+
 class GUISetup(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -26,14 +30,13 @@ if __name__ == '__main__':
     ex = GUISetup()
     ex.initUI()
 #----- Audio Setup -----------------------
-#Need pygame to run aduio, (pip install pygame)
     pygame.init()
     pygame.mixer.music.load("Misc/bgsound.mp3")
     pygame.mixer.music.play()
 #-----------------------------------------
 
 ex.setImage("Misc/title.jpg")
-input("Hit enter.")
+Continue = input("... (Enter to Continue on all text)\n")
 
 ex.setImage("Portraits/blueportrait.jpg")
 p1 = input("Who is a antisocial huntress who goes bear trapping? ")
@@ -102,31 +105,31 @@ for move in range(1,25):
     week += 1
     
     if week == 1:
-      Continue = input("\n... (Enter to Continue on all text)")
+      Continue = input("... (Enter to Continue on all text)\n")
       ex.setImage("Week/1.jpg")  
 
     if week == 2:
-      Continue = input("\n... (Enter to Continue on all text)")
+      Continue = input("... (Enter to Continue on all text)\n")
       ex.setImage("Week/2.jpg")
       input("They say the last time it came, the YAWHG devoured houses whole. Stole lives. Tore families (and family members) apart. But that was so very long ago...\n")
 
     if week == 3:
-      Continue = input("\n... (Enter to Continue on all text)")
+      Continue = input("... (Enter to Continue on all text)\n")
       ex.setImage("Week/3.jpg")
       input("It was on us in a heartbeat -or so the stories go. The earth shook... the air went... still...\n")
 
     if week == 4:
-      Continue = input("\n... (Enter to Continue on all text)")
+      Continue = input("... (Enter to Continue on all text)\n")
       ex.setImage("Week/4.jpg")
       input("...and then the world was a howling fury. Chaos. Screaming. The sound of all we knew being pulled in half...\n") 
 
     if week == 5:
-      Continue = input("\n... (Enter to Continue on all text)")
+      Continue = input("... (Enter to Continue on all text)\n")
       ex.setImage("Week/5.jpg")
       input("When it arrives this time... how will we fare? Will we once more rebuild, move on, be strong... or have we forgotten?\n") 
 
     if week == 6:
-      Continue = input("\n... (Enter to Continue on all text)")
+      Continue = input("... (Enter to Continue on all text)\n")
       ex.setImage("Week/6.jpg")
       input("The YAWHG. It's almost here. Almost, almost.\n") 
 
@@ -576,6 +579,7 @@ for move in range(1,25):
         p4Physique = p4Physique+1
         p4Finesse = p4Finesse+1
 
+Continue = input("... (Enter to Continue on all text)\n")
 ex.setImage("Misc/title.jpg")
 
 Ending = input("The storm arrives in the night. By the morning it still rages. For 3 full days the tempest puts us through a grinder -drowns us, crushes us ruins us...\n")
@@ -818,16 +822,64 @@ for move in range(25,29):
 
     Smelter = input("\nYou lose 3 Wealth.")
 
-  if Role == "6":
+  if Role == "6" and turn in p1turns:
+    ex.setImage("InsetPanels/Ending/bad1.jpg")
+    Tailor = input("\nYou volunteer to weave and mend clothing for the survivors to keep warm!")
+
+    Tailor = input("\nYou make and mend clothing faster than anyone would have ever expected.")
+
+    Tailor = input("\nEvery survivor has now an excess number of scarves, socks, and hats to keep warm.")
+
+    Tailor = input("\nUnfortunately, you traded speed for quality.")
+
+    Tailor = input("\nThis takes it toll on you, as the survivors are now half clothed and very upset.")
+
+    Tailor = input("\nThis hurts the survival effort.")
+
+  if Role == "6" and turn in p2turns:
+    ex.setImage("InsetPanels/Ending/bad2.jpg")
     Tailor = input("\nYou volunteer to weave and mend clothing for the survivors to keep warm!")
 
     Tailor = input("\nYOu make and mend clothing faster than anyone would have ever expected.")
 
     Tailor = input("\nEvery survivor has now an excess number of scarves, socks, and hats to keep warm.")
 
-    Tailor = input("\nThis helps the survival effort immensely!")
+    Tailor = input("\nUnfortunately, you traded speed for quality.")
 
-  if Role == "7":
+    Tailor = input("\nThis takes it toll on you, as the survivors are now half clothed and very upset.")
+
+    Tailor = input("\nThis hurts the survival effort.")
+
+  if Role == "6" and turn in p3turns:
+    ex.setImage("InsetPanels/Ending/bad3.jpg")
+    Tailor = input("\nYou volunteer to weave and mend clothing for the survivors to keep warm!")
+
+    Tailor = input("\nYOu make and mend clothing faster than anyone would have ever expected.")
+
+    Tailor = input("\nEvery survivor has now an excess number of scarves, socks, and hats to keep warm.")
+
+    Tailor = input("\nUnfortunately, you traded speed for quality.")
+
+    Tailor = input("\nThis takes it toll on you, as the survivors are now half clothed and very upset.")
+
+    Tailor = input("\nThis hurts the survival effort.")
+
+  if Role == "6" and turn in p4turns:
+    ex.setImage("InsetPanels/Ending/bad4.jpg")
+    Tailor = input("\nYou volunteer to weave and mend clothing for the survivors to keep warm!")
+    Tailor = input("\nYOu make and mend clothing faster than anyone would have ever expected.")
+
+    Tailor = input("\nEvery survivor has now an excess number of scarves, socks, and hats to keep warm.")
+
+    Tailor = input("\nUnfortunately, you traded speed for quality.")
+
+    Tailor = input("\nThis takes it toll on you, as the survivors are now half clothed and very upset.")
+
+    Tailor = input("\nThis hurts the survival effort.")
+
+
+  if Role == "7" and turn in p1turns:
+    ex.setImage("InsetPanels/Ending/bad1.jpg")
     Looter = input("\nYou break into abandoned buildings and hoard together everything for yourself.")
 
     Looter = input("\nYou gain 3 Wealth!")
@@ -836,11 +888,59 @@ for move in range(25,29):
 
     Looter = input("\nThis hurts the survival effort.")
 
-  if Role == "8":
+  if Role == "7" and turn in p2turns:
+    ex.setImage("InsetPanels/Ending/bad2.jpg")
+    Looter = input("\nYou break into abandoned buildings and hoard together everything for yourself.")
+
+    Looter = input("\nYou gain 3 Wealth!")
+
+    Looter = input("\nYou gain another 3 Wealth!")
+
+    Looter = input("\nThis hurts the survival effort.")
+
+  if Role == "7" and turn in p3turns:
+    ex.setImage("InsetPanels/Ending/bad3.jpg")
+    Looter = input("\nYou break into abandoned buildings and hoard together everything for yourself.")
+
+    Looter = input("\nYou gain 3 Wealth!")
+
+    Looter = input("\nYou gain another 3 Wealth!")
+
+    Looter = input("\nThis hurts the survival effort.")
+
+  if Role == "7" and turn in p4turns:
+    ex.setImage("InsetPanels/Ending/bad4.jpg")
+    Looter = input("\nYou break into abandoned buildings and hoard together everything for yourself.")
+
+    Looter = input("\nYou gain 3 Wealth!")
+
+    Looter = input("\nYou gain another 3 Wealth!")
+
+    Looter = input("\nThis hurts the survival effort.")
+
+  if Role == "8" and turn in p1turns:
+    ex.setImage("InsetPanels/Ending/bad1.jpg")
     Drunk = input("\nYou scavenge together as much alcohol as you can and drink excessively!")
 
     Drunk = input("\nYou gain 2 Physique and 1 Charm.")
 
+  if Role == "8" and turn in p2turns:
+    ex.setImage("InsetPanels/Ending/bad2.jpg")
+    Drunk = input("\nYou scavenge together as much alcohol as you can and drink excessively!")
+
+    Drunk = input("\nYou gain 2 Physique and 1 Charm.")
+
+  if Role == "8" and turn in p3turns:
+    ex.setImage("InsetPanels/Ending/bad3.jpg")
+    Drunk = input("\nYou scavenge together as much alcohol as you can and drink excessively!")
+
+    Drunk = input("\nYou gain 2 Physique and 1 Charm.")
+
+  if Role == "8" and turn in p4turns:
+    ex.setImage("InsetPanels/Ending/bad4.jpg")
+    Drunk = input("\nYou scavenge together as much alcohol as you can and drink excessively!")
+
+    Drunk = input("\nYou gain 2 Physique and 1 Charm.")
 
 Ending = input("\nAnd so:\n")
 
@@ -856,16 +956,18 @@ def rand():
 newEnd = rand()
 
 if newEnd == 1:
+  ex.setImage("InsetPanels/Ending/endinggood.jpg")
   Ending = input("...we flourished.\n")
   Ending = input("Towers, once wrecked & ravaged, rose towards the sky.\n")
   Ending = input("Trees again took root, then blossomed.\n")
   Ending = input("We all blossomed.\n")
   Ending = input("And though it took a long while, and though it took a lot from us,\n")
-  Ending = input("our future is bright\n")
+  Ending = input("our future is bright.\n")
   Ending = input("Should the YAWHG ever return, we will be ready.\n")
   print('THE END')
 
 if newEnd == 2:
+  ex.setImage("InsetPanels/Ending/endingokay.jpg")
   Ending = input("...we were defeated.\n")
   Ending = input("Those of us left struggled to put our homes to rights-\n")
   Ending = input("but the effort was futile.\n")
@@ -876,6 +978,7 @@ if newEnd == 2:
   print('THE END')
 
 if newEnd == 3:
+  ex.setImage("InsetPanels/Ending/endingbad.jpg")
   Ending = input("...it wa a struggle, but a struggle we never abandoned.\n")
   Ending = input("Though our home had been stripped apart, we did not let it languish -and whether we succeed or fail... we did our best.\n")
   Ending = input("Who knows if the YAWHG will visit us again.\n")
@@ -884,11 +987,6 @@ if newEnd == 3:
   Ending = input("ready for it.\n")
   print('THE END')
   
-#----- TODO PASTE IN LOGIC CODE HERE -----
-#Call 'ex.setImage(imageURL)' to display new image
-#Need PyGt5 to run
-#-----------------------------------------
+
 sys.exit(app.exec_())
-
-
 
